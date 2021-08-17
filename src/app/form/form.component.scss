@@ -1,0 +1,30 @@
+span {
+    text-decoration: none;
+    display: inline-block;
+    padding: .5em 1em;
+    font-weight: bold;
+
+    &:hover {
+        background-color: rgb(5, 197, 255);
+        color: black;
+    }
+}
+
+.arrows {
+    display: flex;
+    justify-content: space-between;
+}
+
+.previous {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.next {
+    background-color: #0452aa;
+    color: white;
+}
+
+.round {
+    border-radius: 50%;
+}

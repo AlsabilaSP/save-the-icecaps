@@ -5,11 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { InputNumberModule } from 'primeng/inputnumber';
+import { PersonalInfoComponent } from './personal-info/personal-info.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomepageComponent
+    HomepageComponent,
+    PersonalInfoComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,

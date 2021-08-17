@@ -14,7 +14,7 @@ export class HomepageComponent implements OnInit {
   }
 
   onClick() {
-    this.router.navigateByUrl('subscribe');
+    this.router.navigateByUrl('form');
   }
 
 }

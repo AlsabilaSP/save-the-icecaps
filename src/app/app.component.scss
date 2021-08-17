@@ -1,8 +1,11 @@
 .background {
-    width: 100vw; 
-    height: 100vh; 
+    min-width: 100vw;
+    min-height: 100vh;
+    max-width: 100%; 
+    max-height: 100%; 
     background-image: url('../assets/ice-background.jpg');
     background-size: cover;
+    margin: 0;
 }
 
 .logo {
