@@ -3,7 +3,11 @@
         <div class="progress-bar progress-bar-striped progress-bar-animated"
             role="progressbar" [style.width]="'100%'"></div>
     </div>
-    <router-outlet></router-outlet>
+    <div class="col mt-3">
+        <span>{{ stepNumber }}</span>&nbsp;
+        <span>{{ stepTitle }}</span>
+    </div>
+    <router-outlet (activate)='onActivate($event)'></router-outlet>
     <div class="col arrows">
         <span class="round" (click)="toPrev()">&#8249;</span>&nbsp;
         <span class="round" (click)="toNext()">&#8250;</span>

@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonalInfoComponent implements OnInit {
 
+  stepNumber = 1;
+  stepTitle = 'Your Personal Info';
+  
   constructor() { }
 
   ngOnInit(): void {

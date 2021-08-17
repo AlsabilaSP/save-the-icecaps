@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DonationComponent implements OnInit {
 
+  stepNumber = 2;
+  stepTitle = 'Your Donation';
+
   constructor() { }
 
   ngOnInit(): void {

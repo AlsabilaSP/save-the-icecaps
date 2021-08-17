@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConditionsComponent implements OnInit {
 
+  stepNumber = 3;
+  stepTitle = 'Terms and Conditions';
+
   constructor() { }
 
   ngOnInit(): void {

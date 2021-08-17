@@ -8,6 +8,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class FormComponent implements OnInit {
 
+  stepNumber = 1;
+  stepTitle = 'Your Personal Info';
+
   constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -19,6 +22,11 @@ export class FormComponent implements OnInit {
 
   toNext() {
     this.router.navigate(['conditions'], {relativeTo: this.route})
+  }
+
+  onActivate(event: any) {
+    this.stepNumber = event.stepNumber;
+    this.stepTitle = event.stepTitle;
   }
 
 }

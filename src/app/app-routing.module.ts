@@ -5,6 +5,7 @@ import { DonationComponent } from './donation/donation.component';
 import { FormComponent } from './form/form.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { PersonalInfoComponent } from './personal-info/personal-info.component';
+import { PreviewComponent } from './preview/preview.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
       {
         path: 'conditions',
         component: ConditionsComponent
+      },
+      {
+        path: 'preview',
+        component: PreviewComponent
       },
     ]
   }

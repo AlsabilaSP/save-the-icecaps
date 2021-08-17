@@ -9,6 +9,8 @@ import { PersonalInfoComponent } from './personal-info/personal-info.component';
 import { FormComponent } from './form/form.component';
 import { DonationComponent } from './donation/donation.component';
 import { ConditionsComponent } from './conditions/conditions.component';
+import { PreviewComponent } from './preview/preview.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,9 +19,11 @@ import { ConditionsComponent } from './conditions/conditions.component';
     PersonalInfoComponent,
     FormComponent,
     DonationComponent,
-    ConditionsComponent
+    ConditionsComponent,
+    PreviewComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
