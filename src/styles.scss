@@ -10,3 +10,32 @@
     padding-bottom: 1em;
     border-bottom: 2px solid;
 }
+
+.arrows {
+    display: flex;
+    justify-content: space-between;
+}
+
+.previous {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.next {
+    background-color: #0452aa;
+    color: white;
+}
+
+.round {
+    text-decoration: none;
+    display: inline-block;
+    padding: .5em 1em;
+    font-weight: bold;
+    border-radius: 50%;
+
+    &:hover {
+        background-color: rgb(5, 197, 255);
+        color: black;
+    }
+
+}

@@ -11,6 +11,7 @@ import { HomepageComponent } from './modules/homepage/homepage.component';
 import { FormComponent } from './modules/form/form.component';
 import { DonationComponent } from './modules/donation/donation.component';
 import { PreviewComponent } from './modules/preview/preview.component';
+import { DonationFormService } from './service/donation-form.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { PreviewComponent } from './modules/preview/preview.component';
     AppRoutingModule,
     InputNumberModule
   ],
-  providers: [],
+  providers: [DonationFormService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

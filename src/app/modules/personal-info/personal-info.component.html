@@ -2,7 +2,7 @@
     <div class="col-lg-6 col-md-12 col-sm-12">
         <div class="form-floating my-3">
             <input type="text" class="form-control" id="inputName" 
-                placeholder="Recipient's Name">
+                placeholder="Recipient's Name" [(ngModel)]="recipientName">
             <label for="inputName">Recipient's Name</label>
         </div>
         <div class="form-floating my-3">
@@ -30,4 +30,8 @@
             <label for="inputIncome">Income</label>
         </div>
     </div>
+</div>
+<div class="col arrows">
+    <span class="round" (click)="toPrev()">&#8249;</span>&nbsp;
+    <span class="round" (click)="toNext()">&#8250;</span>
 </div>
