@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.border-line {
+    padding-bottom: 1em;
+    border-bottom: 2px solid;
+}
