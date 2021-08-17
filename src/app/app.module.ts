@@ -7,13 +7,17 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { PersonalInfoComponent } from './personal-info/personal-info.component';
 import { FormComponent } from './form/form.component';
+import { DonationComponent } from './donation/donation.component';
+import { ConditionsComponent } from './conditions/conditions.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
     PersonalInfoComponent,
-    FormComponent
+    FormComponent,
+    DonationComponent,
+    ConditionsComponent
   ],
   imports: [
     BrowserModule,
