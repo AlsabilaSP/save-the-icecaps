@@ -3,14 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomepageComponent } from './homepage/homepage.component';
 import { InputNumberModule } from 'primeng/inputnumber';
-import { PersonalInfoComponent } from './personal-info/personal-info.component';
-import { FormComponent } from './form/form.component';
-import { DonationComponent } from './donation/donation.component';
-import { ConditionsComponent } from './conditions/conditions.component';
-import { PreviewComponent } from './preview/preview.component';
+import { PersonalInfoComponent } from './modules/personal-info/personal-info.component';
+import { ConditionsComponent } from './modules/conditions/conditions.component';
 import { FormsModule } from '@angular/forms';
+import { HomepageComponent } from './modules/homepage/homepage.component';
+import { FormComponent } from './modules/form/form.component';
+import { DonationComponent } from './modules/donation/donation.component';
+import { PreviewComponent } from './modules/preview/preview.component';
 
 @NgModule({
   declarations: [

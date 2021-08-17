@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ConditionsComponent } from './conditions/conditions.component';
-import { DonationComponent } from './donation/donation.component';
-import { FormComponent } from './form/form.component';
-import { HomepageComponent } from './homepage/homepage.component';
-import { PersonalInfoComponent } from './personal-info/personal-info.component';
-import { PreviewComponent } from './preview/preview.component';
+import { ConditionsComponent } from './modules/conditions/conditions.component';
+import { DonationComponent } from './modules/donation/donation.component';
+import { FormComponent } from './modules/form/form.component';
+import { HomepageComponent } from './modules/homepage/homepage.component';
+import { PersonalInfoComponent } from './modules/personal-info/personal-info.component';
+import { PreviewComponent } from './modules/preview/preview.component';
 
 const routes: Routes = [
   {
