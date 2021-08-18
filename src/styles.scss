@@ -39,3 +39,20 @@
     }
 
 }
+
+.btn-donate {
+    height: 50px;
+    width: 150px;
+    background-color: #FFEA00 !important;
+    color: black !important;
+
+    &:hover {
+        font-weight: bolder !important;
+        font-size: larger !important;
+        border: 3px solid white;
+    }
+
+    &:focus {
+        opacity: 0.5;
+    }
+}

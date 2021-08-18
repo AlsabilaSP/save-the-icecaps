@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { InputNumberModule } from 'primeng/inputnumber';
 import { PersonalInfoComponent } from './modules/personal-info/personal-info.component';
 import { ConditionsComponent } from './modules/conditions/conditions.component';
 import { FormsModule } from '@angular/forms';
@@ -27,8 +26,7 @@ import { DonationFormService } from './service/donation-form.service';
     FormsModule,
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule,
-    InputNumberModule
+    AppRoutingModule
   ],
   providers: [DonationFormService],
   bootstrap: [AppComponent]

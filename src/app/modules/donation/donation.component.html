@@ -1,27 +1,37 @@
 <div class="row">
     <div class="my-2 col-12">
         <div class="form-floating my-3">
-            <input type="text" class="form-control" id="inputAmount" placeholder="Amount">
+            <input type="text" class="form-control" 
+                id="inputAmount" 
+                [ngModel]="amount | currency:'EUR':'symbol':'2.2'"
+                [ngModelOptions]="{updateOn:'blur'}"
+                (ngModelChange)="amount=currencyInputChanged($event)"
+                placeholder="Amount">
             <label for="inputAmount">Amount</label>
         </div>
     </div>
     <div class="col-lg-3 col-md-6 col-sm-6">
-        <button type="button" class="btn btn-amount center">10000</button>
+        <button type="button" class="btn btn-amount center"
+            (click)="amount=10">€10</button>
     </div>
     <div class="col-lg-3 col-md-6 col-sm-6">
-        <button type="button" class="btn btn-amount center">10000</button>
+        <button type="button" class="btn btn-amount center"
+            (click)="amount=20">€20</button>
     </div>
     <div class="col-lg-3 col-md-6 col-sm-6">
-        <button type="button" class="btn btn-amount center">10000</button>
+        <button type="button" class="btn btn-amount center"
+            (click)="amount=30">€30</button>
     </div>
     <div class="col-lg-3 col-md-6 col-sm-6">
-        <button type="button" class="btn btn-amount center">10000</button>
+        <button type="button" class="btn btn-amount center"
+            (click)="amount=40">€40 </button>
     </div>
 </div>
 <div class="row mt-2">
     <div class="my-2 col-lg-6 col-md-12 col-sm-12">
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="newsletter" id="oneoff" checked>
+            <input class="form-check-input" type="radio" name="newsletter" id="oneoff"
+                (change)="onChange()" [checked]="isMonthly">
             <label class="form-check-label" for="oneoff">
                 I love polar bears -- select this to opt in of a recurring donation
             </label>
@@ -29,10 +39,15 @@
     </div>
     <div class="my-2 col-lg-6 col-md-12 col-sm-12">
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="newsletter" id="monthly">
+            <input class="form-check-input" type="radio" name="newsletter" id="monthly"
+                (change)="onChange()" [checked]="!isMonthly">
             <label class="form-check-label" for="monthly">
                 I hate polar bears -- select this to opt out of a recurring donation
             </label>
         </div>
     </div>
+</div>
+<div class="col arrows">
+    <span class="previous round" (click)="toPrev()">&#8249;</span>&nbsp;
+    <span class="next round" (click)="toNext()">&#8250;</span>
 </div>

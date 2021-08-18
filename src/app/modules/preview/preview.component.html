@@ -4,7 +4,7 @@
             <span style="font-weight: bold;">Recipient's Name</span>
         </div>
         <div class="col-lg-9 col-md-6 col-sm-6">
-            Yes
+            {{ donationForm.recipientName }}
         </div>
     </div>
     <div class="col-12 inputs">
@@ -12,50 +12,34 @@
             <span style="font-weight: bold;">Address</span>
         </div>
         <div class="col-lg-9 col-md-6 col-sm-6">
-            Yes
-        </div>
-    </div>
-    <div class="col-12 inputs">
-        <div class="col-lg-3 col-md-6 col-sm-6">
-            <span style="font-weight: bold;">Date of Birth</span>
-        </div>
-        <div class="col-lg-9 col-md-6 col-sm-6">
-            Yes
-        </div>
-    </div>
-    <div class="col-12 inputs">
-        <div class="col-lg-3 col-md-6 col-sm-6">
-            <span style="font-weight: bold;">Income</span>
-        </div>
-        <div class="col-lg-9 col-md-6 col-sm-6">
-            Yes
-        </div>
-    </div>
-    <div class="col-12 inputs">
-        <div class="col-lg-3 col-md-6 col-sm-6">
-            <span style="font-weight: bold;">Donation Amount</span>
-        </div>
-        <div class="col-lg-9 col-md-6 col-sm-6">
-            Yes
+            {{ donationForm.address }}
         </div>
     </div>
     <div class="col-12 inputs">
         <div class="form-check">
-            <input class="form-check-input" type="radio" id="newsletter" checked disabled>
-            <label class="form-check-label" for="newsletter">
-              Disabled checked radio
+            <input class="form-check-input" type="radio" id="newsletter" disabled checked>
+            <label class="form-check-label" for="newsletter" *ngIf="donationForm.isMonthly; else isOne">
+                I love polar bears, I'll subscribe monthly
             </label>
+            <ng-template #isOne>
+                <label class="form-check-label" for="newsletter">
+                    I hate polar bears, I'll subscribe once
+                </label>
+            </ng-template>
           </div>
     </div>
     <div class="col-12 inputs">
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="isAgreed" checked disabled>
-            <label class="form-check-label" for="isAgreed">
-                I have read all terms and conditions and agree to be bound by them
-            </label>
-          </div>
+        We'll ask for your donation of {{ donationForm.donationAmount | currency:'EUR':'symbol':'2.2' }} 
+        with your newsletter on 3.5.2021
     </div>
-    <div class="col-12 center">
-        <button type="button" class="btn btn-lg center">Submit</button>
+</div>
+<div class="col arrows mt-3">
+    <div class="col-2">
+        <span class="previous round" (click)="toPrev()">&#8249;</span>
     </div>
+    <div class="col-8 center">
+        <button type="button" class="btn btn-donate btn-lg center"
+            (click)="onSubmit()">Submit</button>
+    </div>
+    <div class="col-2"></div>
 </div>

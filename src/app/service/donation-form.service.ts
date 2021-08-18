@@ -15,9 +15,22 @@ export class DonationFormService {
     gender: '',
     income: 0,
     donationAmount: 0,
-    isMonthly: false,
+    isMonthly: true,
     hasAgreed: false
-  };
+  }
+
+  resetForm() {
+    this.donationForm = {
+      recipientName: '',
+      address: '',
+      dateOfBirth: new Date(),
+      gender: '',
+      income: 0,
+      donationAmount: 0,
+      isMonthly: true,
+      hasAgreed: false
+    }
+  }
 
   getDonationForm(): Observable<DonationForm> {
     return of(this.donationForm);

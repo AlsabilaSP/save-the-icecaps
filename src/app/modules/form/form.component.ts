@@ -9,6 +9,7 @@ export class FormComponent implements OnInit {
 
   stepNumber = 1;
   stepTitle = 'Your Personal Info';
+  stepPercent = '25%';
 
   constructor() { }
 
@@ -18,6 +19,7 @@ export class FormComponent implements OnInit {
   onActivate(event: any) {
     this.stepNumber = event.stepNumber;
     this.stepTitle = event.stepTitle;
+    this.stepPercent = event.stepPercent;
   }
 
 }
